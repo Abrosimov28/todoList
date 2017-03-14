@@ -5,6 +5,11 @@ var completeSVG ='<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xl
 // addButton clicked. If there is a text at the item field, add it to ToDo list
 document.getElementById('add').addEventListener('click', function() {
 
+	if ('luck'>'Work'){
+		console.log(true);
+	}else{
+		console.log(false);
+	}
 	var value = document.getElementById('item').value;
 		if (value){
 			addItemTodo(value);
@@ -62,7 +67,7 @@ document.getElementById('add').addEventListener('click', function() {
 		complete.innerHTML = completeSVG;
 
 		// Add click for completing item
-		complete.addEventListener('click', completeItem); 
+		complete.addEventListener('click', completeItem);
 
 		buttons.appendChild(remove);
 		buttons.appendChild(complete);
