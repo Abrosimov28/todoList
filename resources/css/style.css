@@ -56,7 +56,7 @@ header button {
 	right:15px;
 	z-index:2;
 	background:#fff;
-	border-radius:25px; /*The border-radius property is used to add rounded corners to an element.*/
+	border-radius:25px; /*zaokruhluje rohy.*/
 	border:0px;
 	box-shadow:none;
 	outline:none;
@@ -137,16 +137,6 @@ ul.todo li .buttons button:last-of-type:before {
 }
 
 
-
-/*ul.todo li .buttons button svg{
-	width:22px;
-	height:22px;
-	position:absolute;
-	top:50%;
-	left:50%;
-	margin:-11px 0 0 -11px;
-}*/
-
 ul.todo li .buttons button.remove .fill{
 	fill:#c0cecb;
 }
@@ -192,7 +182,25 @@ ul.todo#completed:not(:empty):before {
 	height:1px;
 	background:#d8e5e0;
 	position:absolute;
-	top:30px;
+	top:20px;
 	left:50%;
 	margin:0 0 0 -75px;
+}
+
+ul.todo#todo:empty:after{
+	content : 'You have nothing to-do.';
+	margin: 15px 0 0 0;
+}
+
+ul.todo#completed:empty:after{
+	content : 'You have yet to complete any task.';
+}
+
+ul.todo#todo:after,
+ul.todo#completed:after{
+	width : 100%;
+	display : block;
+	text-align: center;
+	font-size: 12px;
+	color:#aaa;
 }
